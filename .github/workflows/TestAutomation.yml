@@ -16,7 +16,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          apt install python3 pipenv -y
+          sudo apt update
+          sudo apt install python3 pipenv -y
           pipenv install fastapi uvicorn pytest requests
 
       - name: Start FastAPI server
